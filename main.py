@@ -82,8 +82,8 @@ def on_press(key):
             mins, secs = divmod(int(elapsed), 60)
             print(f"Question {question_index} ended. Duration: {mins}m {secs}s")
             while True:
-                correct = input("Was the question correct? (Yes / No / Not Checked): ").strip().lower()
-                if correct in ["yes", "no", "not checked"]:
+                correct = input("Was the question correct? (yes / no / n/a): ").strip().lower()
+                if correct.lower() in ["yes", "no", "n/a"]:
                     break
                 print("Invalid input. Try again.")
             log_question(question_index, elapsed, correct)
