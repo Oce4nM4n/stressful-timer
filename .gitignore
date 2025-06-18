@@ -1,0 +1,7 @@
+bin/
+lib/
+.DS_Store
+tts_cache/
+output.wav
+pyvenv.cfg
+Question-Log.csv

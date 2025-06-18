@@ -1,0 +1,4 @@
+torch
+simpleaudio
+coqui-tts
+pynput
