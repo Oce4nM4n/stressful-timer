@@ -1,6 +1,3 @@
-Here's a good `README.md` file for your timer application:
-
-```markdown
 # Question Timer Application
 =====================================
 
