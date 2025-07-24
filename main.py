@@ -1,6 +1,5 @@
 import os
 import time
-import torch
 import simpleaudio as sa
 import pandas as pd
 from TTS.api import TTS
@@ -10,7 +9,6 @@ from pynput import keyboard
 print("Initializing TTS...")
 CACHE_DIR = "tts_cache"
 os.makedirs(CACHE_DIR, exist_ok=True)
-tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2")
 
 # CSV setup
 CSV_FILE = "Question-Log.csv"
@@ -22,6 +20,7 @@ def generate_clip(text, filename):
     print(f"Generating clip for: {text}")
     path = os.path.join(CACHE_DIR, filename)
     if not os.path.exists(path):
+        tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2")
         tts.tts_to_file(
             text=text,
             speaker="Craig Gutsy",

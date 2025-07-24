@@ -37,7 +37,7 @@ python3 main.py
 ------------
 
 *   **Spacebar**: Toggles the timer on and off. Pressing it again indicates you've finished a question.
-*   **Q**: Quits the application.
+*   **q**: Quits the application.
 
 ## Logging
 ---------
