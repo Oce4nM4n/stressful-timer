@@ -17,10 +17,11 @@ if not os.path.exists(CSV_FILE):
 
 # Generate cached TTS clips
 def generate_clip(text, filename):
-    print(f"Generating clip for: {text}")
+    print(f"cached clip, number: {text}")
     path = os.path.join(CACHE_DIR, filename)
     if not os.path.exists(path):
         tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2")
+        print(f"Generating clip for: {text}")
         tts.tts_to_file(
             text=text,
             speaker="Craig Gutsy",
