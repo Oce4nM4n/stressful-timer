@@ -19,7 +19,7 @@ A simple command-line application that helps you track the time spent on each qu
 You can install the package via [PyPI](https://pypi.org/):
 
 ```bash
-pip install stress-timer-oce4nm4n
+pip install stress-timer
 ```
 
 Or, if installing from source:
