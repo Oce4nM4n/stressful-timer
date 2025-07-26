@@ -1,52 +1,79 @@
 # Question Timer Application
-=====================================
 
-A simple command-line based application that helps you track the time spent on each question.
+A simple command-line application that helps you track the time spent on each question, with audible time announcements and logging.
 
 ## Features
-------------
 
-*   Starts and stops the timer using the spacebar key.
-*   Automatically logs the elapsed time to a CSV file (`Question-Log.csv`).
-*   Allows you to mark each question as correct or incorrect (yes/no/n/a).
+- Starts and stops the timer using the spacebar key.
+- Announces elapsed time using text-to-speech.
+- Automatically logs the elapsed time to a CSV file (`Question-Log.csv`).
+- Allows you to mark each question as correct, incorrect, or not applicable (yes/no/n/a).
 
-## Usage
------
+## Prerequisites
 
-### Prerequisites
--------------------
+- Python 3.10, 3.11, or 3.12 (Python 3.13 is **not supported** due to dependencies).
+- macOS, Linux, or Windows.
 
-Make sure you have Python 3 installed on your system.
+## Installation
 
-### Installation
----------------
-
-1.  Run `pip3 install -r requirements.txt` in the terminal to install the required packages.
-2.  Navigate to the project directory using the command `cd /path/to/project/directory`.
-
-### Running the Application
----------------------------
-
-To start the timer application, run the following command:
+You can install the package via [PyPI](https://pypi.org/):
 
 ```bash
-python3 main.py
+pip install stress-timer-oce4nm4n
+```
+
+Or, if installing from source:
+
+```bash
+git clone https://github.com/yourusername/stress-timer-oce4nm4n.git
+cd stress-timer-oce4nm4n
+pip install .
+```
+
+If you use Poetry:
+
+```bash
+poetry install
+```
+
+## Running the Application
+
+To start the timer application, run:
+
+```bash
+stress-timer
+```
+
+Or, if running from source:
+
+```bash
+python -m stress_timer_oce4nm4n.main
 ```
 
 ## Controls
-------------
 
-*   **Spacebar**: Toggles the timer on and off. Pressing it again indicates you've finished a question.
-*   **q**: Quits the application.
+- **Spacebar**: Start or stop the timer. Press again when you finish a question.
+- **q**: Quit the application.
 
 ## Logging
----------
 
-The elapsed time for each question is automatically logged to `Question-Log.csv`. You can view this file by opening it in any CSV editor or spreadsheet software.
+The elapsed time for each question is automatically logged to `Question-Log.csv` in the same directory as the script. You can open this file in any CSV editor or spreadsheet software.
 
 ### Example Log File Format
----------------------------
 
-| Question | Time | Correct |
-| --- | --- | --- |
-| 1         | 30                    | yes                |
+| Question | Time (seconds) | Correct |
+|----------|----------------|---------|
+| 1        | 30             | yes     |
+| 2        | 45             | no      |
+
+## Troubleshooting
+
+- **Python version errors:**
+  If you encounter errors about missing or incompatible dependencies, ensure you are using Python 3.10, 3.11, or 3.12.
+- **Audio issues:**
+  Make sure your system audio is working and you have the necessary permissions.
+
+## License
+
+MIT License
+
