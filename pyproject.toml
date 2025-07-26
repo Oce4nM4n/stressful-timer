@@ -1,6 +1,6 @@
 [project]
 name = "stress-timer"
-version = "0.1.0"
+version = "0.1.1"
 description = "A timer that says the time, and stresses you out, it also provides tracking for questions and the time spent on the questions."
 authors = [
     {name = "Oce4nM4n",email = "ayushmansihag@gmail.com"}
