@@ -5,3 +5,5 @@ tts_cache/
 output.wav
 pyvenv.cfg
 Question-Log.csv
+.venv/*
+dist/
